@@ -19,12 +19,11 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-// main().catch(err => console.log(err));
+main().catch(err => console.log(err));
 
-// async function main() {
-//   await mongoose.connect('mongodb://localhost:27017/test');
-// }
-mongoose.connect("mongodb+srv://hkhattar14:!41rattahkH@cluster0.ez3lfq1.mongodb.net/blogDB");
+async function main() {
+  await mongoose.connect('mongodb://localhost:27017/test');
+}
 
 const postSchema = {
   title: String,
