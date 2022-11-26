@@ -25,6 +25,8 @@ app.use(express.static("public"));
  // await mongoose.connect('mongodb://localhost:27017/test');
 //}
 
+mongoose.connect("mongodb+srv://hkhattar14:!41rattahkH@cluster0.ez3lfq1.mongodb.net/blogDB");
+
 const postSchema = {
   title: String,
   content: String
